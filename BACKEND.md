@@ -10,6 +10,7 @@
 | lastName   | String    | yes      |                                    |
 | email      | String    | yes      | unique                             |
 | password   | String    | yes      | password hash                      |
+| city       | String    | yes      |                      |
 | age        | integer   | no       |                                    |
 | gender     | String    | no       |                                    |
 | nationality| String    | no       |                                    |
