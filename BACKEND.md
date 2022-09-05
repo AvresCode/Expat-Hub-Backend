@@ -38,7 +38,7 @@
 | spots      | integer   | yes      |                                    |
 | imageUrl   | Text      | yes      |                                    |
 | userId     | Integer   | yes      |                                    |
-|categoryId  | Text      | yes      |                                    |
+|categoryId  | Integer   | yes      |                                    |
 | createdAt  | Date      | yes      |Already added by model:generate     |
 | updatedAt  | Date      | yes      |Already added by model:generate     |
 
