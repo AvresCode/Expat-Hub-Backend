@@ -19,8 +19,6 @@ module.exports = (sequelize, DataTypes) => {
       address: { type: DataTypes.STRING, allowNull: false },
       spots: { type: DataTypes.INTEGER, allowNull: false },
       imageUrl: { type: DataTypes.TEXT, allowNull: false },
-      userId: { type: DataTypes.INTEGER, allowNull: false },
-      categoryId: { type: DataTypes.INTEGER, allowNull: false },
     },
     {
       sequelize,

@@ -13,8 +13,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   userSkill.init(
     {
-      userId: { type: DataTypes.INTEGER, allowNull: false },
-      skillId: { type: DataTypes.INTEGER, allowNull: false },
       canTeach: { type: DataTypes.STRING, allowNull: false },
       wantsToLearn: { type: DataTypes.STRING, allowNull: false },
     },

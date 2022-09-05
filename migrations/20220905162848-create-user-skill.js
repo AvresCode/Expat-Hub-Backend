@@ -8,14 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      userId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      skillId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
+
       canTeach: {
         type: Sequelize.STRING,
         allowNull: false,

@@ -12,14 +12,7 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
-      userId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      eventId: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

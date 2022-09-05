@@ -12,10 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   attendee.init(
-    {
-      userId: { type: DataTypes.INTEGER, allowNull: false },
-      eventId: { type: DataTypes.INTEGER, allowNull: false },
-    },
+    {},
     {
       sequelize,
       modelName: "attendee",
