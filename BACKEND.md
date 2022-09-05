@@ -25,6 +25,8 @@
 - User has many events
 - User has many images
 - User has many comments
+- User has many items
+- User has many skills
 
 ###   Event
 
@@ -98,3 +100,63 @@
 - Image belongs to a user.
 - Image belongs to an event.
 
+###  Attendees (Joint table)
+
+| key        | data type | required | notes                              |
+| ---------  | --------- | -------- | ---------------------------------- |
+| id         | Integer   | yes      |Already added by model:generate     |
+| userId     | Integer   | yes      |                                    |
+| eventId    | Integer   | yes      |                                    |
+| createdAt  | Date      | yes      |Already added by model:generate     |
+| updatedAt  | Date      | yes      |Already added by model:generate     |
+
+**Relations:**
+
+-Event belongs to many users 
+-User belongs to many events
+
+### Item
+
+| key        | data type | required | notes                              |
+| ---------  | --------- | -------- | ---------------------------------- |
+| id         | Integer   | yes      |Already added by model:generate     |
+| name       | String    | yes      |                                    |
+|description | String    | yes      |                                    |
+| imageUrl   | Text      | yes      |                                    |
+| userId     | Integer   | yes      |                                    |
+| createdAt  | Date      | yes      |Already added by model:generate     |
+| updatedAt  | Date      | yes      |Already added by model:generate     |
+
+**Relations:**
+
+- Item belongs to a user.
+
+### Skill
+
+| key        | data type | required | notes                              |
+| ---------  | --------- | -------- | ---------------------------------- |
+| id         | Integer   | yes      |Already added by model:generate     |
+| name       | String    | yes      |                                    |
+| createdAt  | Date      | yes      |Already added by model:generate     |
+| updatedAt  | Date      | yes      |Already added by model:generate     |
+
+**Relations:**
+
+- Skill has many users
+
+### UserSkill
+
+| key          | data type | required | notes                              |
+| ---------    | --------- | -------- | ---------------------------------- |
+| id           | Integer   | yes      |Already added by model:generate     |
+| userId       | Integer   | yes      |                                    |
+| skillId      | Integer   | yes      |                                    |
+| can_teach    | String    | yes      |                                    |
+|wants_to_learn| String    | yes      |                                    |
+| createdAt    | Date      | yes      |Already added by model:generate     |
+| updatedAt    | Date      | yes      |Already added by model:generate     |
+
+**Relations:**
+
+- Skill belongs to many users
+- User belongs to many skills
