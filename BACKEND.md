@@ -112,8 +112,8 @@
 
 **Relations:**
 
--Event belongs to many users 
--User belongs to many events
+- Event belongs to many users 
+- User belongs to many events
 
 ### Item
 
