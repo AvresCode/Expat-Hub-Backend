@@ -8,9 +8,18 @@ module.exports = {
       { type: Sequelize.STRING, allowNull: false },
       {}
     );
+    await queryInterface.addColumn(
+      "users",
+      "birthDate",
+      { type: Sequelize.DATE },
+      {}
+    );
   },
 
   down: async (queryInterface, Sequelize) => {
     await queryInterface.removeColumn("users", "city", {});
+  },
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.removeColumn("users", "birthDate", {});
   },
 };

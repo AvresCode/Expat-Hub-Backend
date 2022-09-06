@@ -20,6 +20,14 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
+      time: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      city: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       address: {
         type: Sequelize.STRING,
         allowNull: false,

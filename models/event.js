@@ -8,7 +8,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      event.hasMany(models.image, { foreignKey: "eventId" });
+      event.hasMany(models.comment, { foreignKey: "eventId" });
+      event.belongsTo(models.user, { foreignKey: "userId" });
+      event.belongsTo(models.category, { foreignKey: "categoryId" });
+      event.belongsTo(models.category, { foreignKey: "categoryId" });
+      event.belongsToMany(models.user, {
+        through: "attendees",
+        foreignKey: "userId",
+      });
     }
   }
   event.init(
@@ -16,6 +24,8 @@ module.exports = (sequelize, DataTypes) => {
       title: { type: DataTypes.STRING, allowNull: false },
       description: { type: DataTypes.STRING, allowNull: false },
       date: { type: DataTypes.DATE, allowNull: false },
+      time: { type: DataTypes.STRING, allowNull: false },
+      city: { type: DataTypes.STRING, allowNull: false },
       address: { type: DataTypes.STRING, allowNull: false },
       spots: { type: DataTypes.INTEGER, allowNull: false },
       imageUrl: { type: DataTypes.TEXT, allowNull: false },
