@@ -8,34 +8,50 @@ module.exports = {
         {
           userId: 2,
           eventId: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           userId: 5,
           eventId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           userId: 5,
           eventId: 4,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           userId: 6,
           eventId: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           userId: 3,
           eventId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           userId: 7,
           eventId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           userId: 8,
           eventId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
         {
           userId: 6,
           eventId: 3,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         },
       ],
       {}

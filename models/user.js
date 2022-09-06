@@ -12,8 +12,9 @@ module.exports = (sequelize, DataTypes) => {
       user.hasMany(models.image, { foreignKey: "userId" });
       user.hasMany(models.comment, { foreignKey: "userId" });
       user.belongsToMany(models.event, {
+        as: "going",
         through: "attendees",
-        foreignKey: "eventId",
+        foreignKey: "userId",
       });
     }
   }
