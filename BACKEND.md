@@ -11,6 +11,7 @@
 | email      | String    | yes      | unique                             |
 | password   | String    | yes      | password hash                      |
 | city       | String    | yes      |                                    |
+| birthDate  | Date      | no       |                                    |
 | age        | Integer   | no       |                                    |
 | gender     | String    | no       |                                    |
 | nationality| String    | no       |                                    |
@@ -36,6 +37,8 @@
 | title      | String    | yes      |                                    |
 |description | String    | yes      |                                    |
 | date       | Date      | yes      |                                    |
+| time       | String    | yes      |                                    |
+| city       | String    | yes      |                                    |
 | address    | String    | yes      |                                    |
 | spots      | integer   | yes      |                                    |
 | imageUrl   | Text      | yes      |                                    |
