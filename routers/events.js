@@ -2,6 +2,7 @@ const { Router } = require("express");
 const router = new Router();
 const User = require("../models").user;
 const Event = require("../models").event;
+const Attendee = require("../models").attendee;
 const authMiddleware = require("../auth/middleware");
 
 //get all the events for HomePage
@@ -12,7 +13,13 @@ const authMiddleware = require("../auth/middleware");
 router.get("/", async (req, res, next) => {
   try {
     const eventResponse = await Event.findAll({
-      include: { model: User, as: "going" },
+      include: [
+        {
+          model: User,
+          as: "going",
+          through: { attributes: ["userId", "eventId", "status"] },
+        },
+      ],
     });
     console.log("eventResponse", eventResponse);
     res.send(eventResponse);

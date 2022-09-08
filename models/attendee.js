@@ -13,7 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   attendee.init(
-    {},
+    {
+      status: { type: DataTypes.BOOLEAN, allowNull: false },
+    },
     {
       sequelize,
       modelName: "attendee",

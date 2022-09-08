@@ -16,7 +16,7 @@ module.exports = {
           gender: "Female",
           nationality: "Polish",
           education: "Master of biology",
-          imageUrl: "",
+          imageUrl: "../images.myPhoto",
           isAmbassador: true,
           createdAt: new Date(),
           updatedAt: new Date(),
