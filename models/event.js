@@ -25,7 +25,6 @@ module.exports = (sequelize, DataTypes) => {
       title: { type: DataTypes.STRING, allowNull: false },
       description: { type: DataTypes.STRING, allowNull: false },
       date: { type: DataTypes.DATE, allowNull: false },
-      time: { type: DataTypes.STRING, allowNull: false },
       city: { type: DataTypes.STRING, allowNull: false },
       address: { type: DataTypes.STRING, allowNull: false }, //latitude, longitude
       spots: { type: DataTypes.INTEGER, allowNull: false },

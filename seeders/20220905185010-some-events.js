@@ -10,7 +10,6 @@ module.exports = {
           description:
             "On Thursdays we are organizing a Game Night! This night is meant for national and international people from inside and outside of the hostel. The purpose is to meet others, to learn about other languages, and to have fun while playing board games! ",
           date: "2022-09-10 20:00:00",
-          time: "20:00",
           city: "The Hague",
           address: "Cafe of The Golden Stork, Bierkade 22A, The Hague",
           spots: 12,
@@ -26,7 +25,6 @@ module.exports = {
           description:
             "You are hereby welcome to join a try-out session of Salsa Beginners, Salsa Intermediate and Salsa Advance. You can attend these sessions and decide whether you want to join the course that starts the week after.",
           date: "2022-10-09 17:00:00",
-          time: "17:00",
           city: "Amsterdam",
           address: "Swing Latino School, Kuiperbergweg 31,  Amsterdam",
           spots: 30,
@@ -42,7 +40,6 @@ module.exports = {
           description:
             "Let's watch this excellent movie together! A Korean erotically smoldering flick according to a review in 'De Volkskrant'. ",
           date: "2022-09-11 18:00:00",
-          time: "18:00",
           city: "The Hague",
           address: "Filmhuis Den Haag, Spui 191, The Hague",
           spots: 15,
@@ -58,8 +55,7 @@ module.exports = {
           title: "Luxury Winetasting with Matching Fingerfoods",
           description:
             "Let's watch this excellent movie together! A Korean erotically smoldering flick according to a review in 'De Volkskrant'. ",
-          date: "2022-09-11 18:00:00",
-          time: "18:00",
+          date: "2022-09-11 19:00:00",
           city: "The Hague",
           address: "Bouzy, Wine & Food, Denneweg 83, The Hague",
           spots: 12,

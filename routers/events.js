@@ -84,4 +84,54 @@ router.patch("/:eventId", authMiddleware, async (req, res, next) => {
   }
 });
 
+// isAmbassador can create an event
+//   get token : http --ignore-stdin POST :4000/auth/login email="neda@neda.com" password="neda"
+//http POST :4000/events/addEvent title=dinner description=eatout date=2022-09-10T09:46:20.503Z city=delft address=calandplein spots=10 imageUrl=foto2 categoryId=2 authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2MjcxNjAyNiwiZXhwIjoxNjYyNzIzMjI2fQ.06RFFFYs13Y8PtjJzmEhP4Il7xaLsuQWmB8pPq1qojw"
+router.post("/addEvent", authMiddleware, async (req, res, next) => {
+  try {
+    const {
+      title,
+      description,
+      date,
+      city,
+      address,
+      spots,
+      imageUrl,
+      categoryId,
+    } = req.body;
+
+    const userId = req.user.id;
+
+    if (
+      !title ||
+      !description ||
+      !date ||
+      !city ||
+      !address ||
+      !spots ||
+      !imageUrl ||
+      !categoryId
+    ) {
+      return res.status(400).send("missing information");
+    } else {
+      const newEvent = await Event.create({
+        title,
+        description,
+        date,
+        city,
+        address,
+        spots,
+        imageUrl,
+        categoryId,
+        userId,
+      });
+
+      res.send({ newEvent, message: "Event added successfully!" });
+    }
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 module.exports = router;
