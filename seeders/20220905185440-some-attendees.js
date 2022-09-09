@@ -13,9 +13,24 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          userId: 2,
+          eventId: 5,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
           userId: 5,
           eventId: 2,
           status: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 5,
+          eventId: 7,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -34,6 +49,13 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          userId: 6,
+          eventId: 7,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
           userId: 3,
           eventId: 1,
           status: true,
@@ -47,16 +69,46 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+
         {
-          userId: 8,
-          eventId: 2,
+          userId: 1,
+          eventId: 3,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          userId: 6,
+          userId: 1,
+          eventId: 5,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 6,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
           eventId: 3,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 8,
+          eventId: 5,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 8,
+          eventId: 2,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
