@@ -86,7 +86,7 @@ router.patch("/:eventId", authMiddleware, async (req, res, next) => {
 
 // isAmbassador can create an event
 //   get token : http --ignore-stdin POST :4000/auth/login email="neda@neda.com" password="neda"
-//http POST :4000/events/addEvent title=dinner description=eatout date=2022-09-10T09:46:20.503Z city=delft address=calandplein spots=10 imageUrl=foto2 categoryId=2 authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2MjcxNjAyNiwiZXhwIjoxNjYyNzIzMjI2fQ.06RFFFYs13Y8PtjJzmEhP4Il7xaLsuQWmB8pPq1qojw"
+//http --ignore-stdin POST :4000/events/addEvent title=dinner description=eatout date=2022-09-10T09:46:20.503Z city=delft address=calandplein spots=10 imageUrl=foto2 categoryId=2 authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2MjcxNjAyNiwiZXhwIjoxNjYyNzIzMjI2fQ.06RFFFYs13Y8PtjJzmEhP4Il7xaLsuQWmB8pPq1qojw"
 router.post("/addEvent", authMiddleware, async (req, res, next) => {
   try {
     const {
@@ -130,6 +130,63 @@ router.post("/addEvent", authMiddleware, async (req, res, next) => {
     }
   } catch (e) {
     console.log(e.message);
+    next(e);
+  }
+});
+
+//delete the event
+//http DELETE :4000/events/7 authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2Mjc5NTM0OCwiZXhwIjoxNjYyODAyNTQ4fQ.4VJh1FGRenY7_V1meOrrQq0RBcCM2Fy_IHZmi33Ny0g"
+router.delete("/:eventId", authMiddleware, async (req, res, next) => {
+  try {
+    const { eventId } = req.params;
+    const eventToDelete = await Event.findByPk(eventId);
+    await eventToDelete.destroy();
+
+    res.status(200).send("Event deleted successfully");
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
+//edit the event
+// try from the terminal without auth
+//   get token : http --ignore-stdin POST :4000/auth/login email="neda@neda.com" password="neda"
+// http --ignore-stdin PATCH :4000/events/2/edit title=salsadance description=party date=2022-09-10T09:46:20.503Z city=delft address=calandplein spots=10 imageUrl=foto2 categoryId=2 authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2Mjc5NTM0OCwiZXhwIjoxNjYyODAyNTQ4fQ.4VJh1FGRenY7_V1meOrrQq0RBcCM2Fy_IHZmi33Ny0g"
+router.patch("/:eventId/edit", authMiddleware, async (req, res, next) => {
+  try {
+    const { eventId } = req.params;
+    const userId = req.user.id;
+
+    const {
+      title,
+      description,
+      date,
+      city,
+      address,
+      spots,
+      imageUrl,
+      categoryId,
+    } = req.body;
+
+    const event = await Event.findByPk(eventId);
+    await event.update({
+      title,
+      description,
+      date,
+      city,
+      address,
+      spots,
+      imageUrl,
+      categoryId,
+      userId,
+    });
+
+    return res
+      .status(200)
+      .send({ event, message: "Event edited successfully!" });
+  } catch (e) {
+    console.log("event edit error:", e.message);
     next(e);
   }
 });
