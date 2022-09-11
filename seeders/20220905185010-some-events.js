@@ -59,7 +59,7 @@ module.exports = {
           address: "Filmhuis Den Haag, Spui 191, The Hague",
           spots: 15,
           imageUrl:
-            "https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80",
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662884004/test_upload/wdyhazkfjlvgo7lfesv5.jpg",
           userId: 5,
           categoryId: 4,
           createdAt: new Date(),
