@@ -214,4 +214,25 @@ router.patch("/:eventId/edit", authMiddleware, async (req, res, next) => {
   }
 });
 
+// post a new comment
+//   get token : http --ignore-stdin POST :4000/auth/login email="neda@neda.com" password="neda"
+//http --ignore-stdin POST :4000/events/2/comment text=great  authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2MjkyOTUxMCwiZXhwIjoxNjYyOTM2NzEwfQ.YVSKqVN_yXNOEugssSO-MxwuxxgMlp_XjHHS2nAKpPs"
+
+router.post("/:eventId/comment", authMiddleware, async (req, res, next) => {
+  try {
+    const { text } = req.body;
+    const { eventId } = req.params;
+    const userId = req.user.id;
+    if (!text) {
+      return res.status(400).send("missing information");
+    } else {
+      const newComment = await Comment.create({ text, eventId, userId });
+      res.send({ newComment, message: "Comment added!" });
+    }
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 module.exports = router;
