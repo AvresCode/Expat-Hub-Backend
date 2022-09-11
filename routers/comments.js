@@ -13,7 +13,29 @@ const authMiddleware = require("../auth/middleware");
 
 router.get("/", async (req, res, next) => {
   try {
-    const comment = await Comment.findAll();
+    // const comment = await Comment.findAll();
+    const comment = await Comment.findAll({
+      include: [{ model: User }, { model: Event }],
+    });
+    res.send(comment);
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
+//get comments for one event
+//http :4000/comments/2
+//http --ignore-stdin :4000/comments/2
+//http://localhost:4000/comments/2
+
+router.get("/:eventId", async (req, res, next) => {
+  try {
+    const { eventId } = req.params;
+    const comment = await Comment.findAll({
+      where: { eventId: eventId },
+      include: [{ model: User }, { model: Event }],
+    });
     res.send(comment);
   } catch (e) {
     console.log(e.message);
