@@ -6,6 +6,7 @@ const corsMiddleWare = require("cors");
 const authRouter = require("./routers/auth");
 const eventRouter = require("./routers/events");
 const commentRouter = require("./routers/comments");
+const imageRouter = require("./routers/images");
 //constants
 const { PORT } = require("./config/constants");
 
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use("/auth", authRouter);
 app.use("/events", eventRouter);
 app.use("/comments", commentRouter);
+app.use("/images", imageRouter);
 
 //start listening
 app.listen(PORT, () => {
