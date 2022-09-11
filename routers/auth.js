@@ -94,4 +94,18 @@ router.get("/me", authMiddleware, async (req, res) => {
   res.status(200).send({ ...req.user.dataValues });
 });
 
+//http :4000/auth/users
+//http --ignore-stdin :4000/auth/users
+//http://localhost:4000/auth/users
+router.get("/users", async (req, res, next) => {
+  try {
+    const user = await User.findAll();
+    // const user = await User.findAll({ attributes: { exclude: ["password"] } });
+    res.send(user);
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 module.exports = router;
