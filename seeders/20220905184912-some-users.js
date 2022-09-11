@@ -16,7 +16,8 @@ module.exports = {
           gender: "Female",
           nationality: "Polish",
           education: "Master of biology",
-          imageUrl: "../images.myPhoto",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662895521/test_upload/b9hqdbdhnjq1urgntm2v.jpg",
           isAmbassador: true,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -32,7 +33,8 @@ module.exports = {
           gender: "Female",
           nationality: "Dutch",
           education: "Nutrition science",
-          imageUrl: "",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662895581/test_upload/r9qbjpwqtlqkiuwiw5y5.jpg",
           isAmbassador: false,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -48,7 +50,8 @@ module.exports = {
           gender: "Male",
           nationality: "Persian",
           education: "Business management",
-          imageUrl: "",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662895623/test_upload/ghrqlbcqfu6uamclvebc.jpg",
           isAmbassador: true,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -64,7 +67,8 @@ module.exports = {
           gender: "Female",
           nationality: "Indonesian",
           education: "Architecture",
-          imageUrl: "",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662896077/test_upload/khqpv5xijhbahbsqt4dw.jpg",
           isAmbassador: false,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -80,7 +84,8 @@ module.exports = {
           gender: "Male",
           nationality: "British",
           education: "Information Technology",
-          imageUrl: "",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662895652/test_upload/rkbian1yylrtbacunova.jpg",
           isAmbassador: true,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -96,7 +101,8 @@ module.exports = {
           gender: "Male",
           nationality: "American",
           education: "Political science",
-          imageUrl: "",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662896034/test_upload/mxam6xmz7hzshtx9bnx5.jpg",
           isAmbassador: false,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -112,7 +118,8 @@ module.exports = {
           gender: "Female",
           nationality: "South African",
           education: "Psychology",
-          imageUrl: "",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662895870/test_upload/xhxuelpsz7qp5xefos0b.jpg",
           isAmbassador: true,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -128,7 +135,8 @@ module.exports = {
           gender: "Male",
           nationality: "French",
           education: "Dentistry",
-          imageUrl: "",
+          imageUrl:
+            "http://res.cloudinary.com/delvoxvyc/image/upload/v1662895836/test_upload/pbn0webuyjdgfjulrfmv.jpg",
           isAmbassador: false,
           createdAt: new Date(),
           updatedAt: new Date(),
