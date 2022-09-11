@@ -36,17 +36,37 @@ router.post("/login", async (req, res, next) => {
 });
 
 //signup
+//http --ignore-stdin POST :4000/auth/signup firstName=alan lastName=sdi email=alan@alan.com password=1234 city=lahe birthdate=1990 gender=male nationality=german education=master imageUrl=""
 router.post("/signup", async (req, res) => {
-  const { email, password, name } = req.body;
-  if (!email || !password || !name) {
-    return res.status(400).send("Please provide an email, password and a name");
+  const {
+    firstName,
+    lastName,
+    email,
+    password,
+    city,
+    birthDate,
+    gender,
+    nationality,
+    education,
+    imageUrl,
+  } = req.body;
+
+  if (!firstName || !lastName || !email || !password || !city) {
+    return res.status(400).send("Please provide all required information");
   }
 
   try {
     const newUser = await User.create({
+      firstName,
+      lastName,
       email,
       password: bcrypt.hashSync(password, SALT_ROUNDS),
-      name,
+      city,
+      birthDate,
+      gender,
+      nationality,
+      education,
+      imageUrl,
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
