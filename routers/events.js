@@ -2,6 +2,8 @@ const { Router } = require("express");
 const router = new Router();
 const User = require("../models").user;
 const Event = require("../models").event;
+const Comment = require("../models").comment;
+const Image = require("../models").image;
 const Attendee = require("../models").attendee;
 const authMiddleware = require("../auth/middleware");
 
@@ -41,7 +43,11 @@ router.get("/:id", async (req, res, next) => {
     const { id } = req.params;
 
     const eventDetailsResponse = await Event.findByPk(id, {
-      include: { model: User, as: "going" },
+      include: [
+        { model: User, as: "going" },
+        { model: Comment },
+        { model: Image },
+      ],
     });
     console.log("detail Response", eventDetailsResponse);
     res.send(eventDetailsResponse);
@@ -50,6 +56,23 @@ router.get("/:id", async (req, res, next) => {
     next(e);
   }
 });
+
+//get details page for an event without comments
+
+// router.get("/:id", async (req, res, next) => {
+//   try {
+//     const { id } = req.params;
+
+//     const eventDetailsResponse = await Event.findByPk(id, {
+//       include: { model: User, as: "going" },
+//     });
+//     console.log("detail Response", eventDetailsResponse);
+//     res.send(eventDetailsResponse);
+//   } catch (e) {
+//     console.log("detail router error", e.message);
+//     next(e);
+//   }
+// });
 
 //   get token : http --ignore-stdin POST :4000/auth/login email="neda@neda.com" password="neda"
 // http --ignore-stdin PATCH :4000/events/4 status=false authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2MjYzODg3NCwiZXhwIjoxNjYyNjQ2MDc0fQ.kQqnVyykAvw5OY-2_rTq-aJ-7qhnlqK-EScAURikKxA"
