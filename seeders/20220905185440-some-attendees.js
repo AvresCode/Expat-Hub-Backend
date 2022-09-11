@@ -72,7 +72,29 @@ module.exports = {
 
         {
           userId: 1,
+          eventId: 1,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 2,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 1,
           eventId: 3,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 4,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
