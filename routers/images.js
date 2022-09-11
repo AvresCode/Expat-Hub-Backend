@@ -1,3 +1,7 @@
+// I do not use this router for the moment!
+//
+//
+
 const { Router } = require("express");
 const router = new Router();
 const Image = require("../models").image;
