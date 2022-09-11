@@ -42,19 +42,18 @@ router.post("/:eventId", authMiddleware, async (req, res, next) => {
 });
 
 //update a comment
-//http --ignore-stdin PATCH :4000/comments/2/5 text=amazing authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2Mjg4NzM4NywiZXhwIjoxNjYyODk0NTg3fQ.pmpJartOJpqlbHp4wZzqe6Ij_SXcXkFFqSKsfZQOShM"
-router.patch("/:eventId/:commentId", authMiddleware, async (req, res, next) => {
+//http --ignore-stdin PATCH :4000/comments/5 text=amazing authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2Mjg4NzM4NywiZXhwIjoxNjYyODk0NTg3fQ.pmpJartOJpqlbHp4wZzqe6Ij_SXcXkFFqSKsfZQOShM"
+router.patch("/:commentId", authMiddleware, async (req, res, next) => {
   try {
-    const { eventId, commentId } = req.params;
+    const { commentId } = req.params;
     const { text } = req.body;
-    const userId = req.user.id;
     const commentToUpdate = await Comment.findByPk(commentId);
 
     if (!commentToUpdate) {
       res.status(404).send("User not found");
     }
 
-    const updated = await commentToUpdate.update({ text, userId, eventId });
+    const updated = await commentToUpdate.update({ text });
 
     res.send(updated);
   } catch (e) {
