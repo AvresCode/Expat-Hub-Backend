@@ -10,10 +10,11 @@ const authMiddleware = require("../auth/middleware");
 //http :4000/comments
 //http --ignore-stdin :4000/comments
 //http://localhost:4000/comments
-router.get("/", async (request, response, next) => {
+
+router.get("/", async (req, res, next) => {
   try {
     const comment = await Comment.findAll();
-    response.send(comment);
+    res.send(comment);
   } catch (e) {
     console.log(e.message);
     next(e);
