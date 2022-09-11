@@ -60,4 +60,19 @@ router.patch("/:imageId", authMiddleware, async (req, res, next) => {
   }
 });
 
+//delete image
+//http --ignore-stdin DELETE :4000/images/5 authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2Mjg4NzM4NywiZXhwIjoxNjYyODk0NTg3fQ.pmpJartOJpqlbHp4wZzqe6Ij_SXcXkFFqSKsfZQOShM"
+router.delete("/:imageId", authMiddleware, async (req, res, next) => {
+  try {
+    const { imageId } = req.params;
+    const imageToDelete = await Image.findByPk(imageId);
+    await imageToDelete.destroy();
+
+    res.send("Image deleted");
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 module.exports = router;
