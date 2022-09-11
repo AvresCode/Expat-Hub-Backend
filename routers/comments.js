@@ -50,12 +50,27 @@ router.patch("/:commentId", authMiddleware, async (req, res, next) => {
     const commentToUpdate = await Comment.findByPk(commentId);
 
     if (!commentToUpdate) {
-      res.status(404).send("User not found");
+      res.status(404).send("Comment not found");
     }
 
     const updated = await commentToUpdate.update({ text });
 
     res.send(updated);
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
+//delete comment
+//http --ignore-stdin DELETE :4000/comments/5 authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2Mjg4NzM4NywiZXhwIjoxNjYyODk0NTg3fQ.pmpJartOJpqlbHp4wZzqe6Ij_SXcXkFFqSKsfZQOShM"
+router.delete("/:commentId", authMiddleware, async (req, res, next) => {
+  try {
+    const { commentId } = req.params;
+    const commentToDelete = await Comment.findByPk(commentId);
+    await commentToDelete.destroy();
+
+    res.send("comment deleted");
   } catch (e) {
     console.log(e.message);
     next(e);
