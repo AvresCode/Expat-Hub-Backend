@@ -39,4 +39,25 @@ router.post("/:eventId", authMiddleware, async (req, res, next) => {
   }
 });
 
+//update an image
+//http --ignore-stdin PATCH :4000/images/4 imageUrl="https://images.unsplash.com/photo-1642009189383-56dc22a2862d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"  authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2Mjg4NzM4NywiZXhwIjoxNjYyODk0NTg3fQ.pmpJartOJpqlbHp4wZzqe6Ij_SXcXkFFqSKsfZQOShM"
+router.patch("/:imageId", authMiddleware, async (req, res, next) => {
+  try {
+    const { imageId } = req.params;
+    const { imageUrl } = req.body;
+    const imageToUpdate = await Image.findByPk(imageId);
+
+    if (!imageToUpdate) {
+      res.status(404).send("image not found");
+    }
+
+    const updated = await imageToUpdate.update({ imageUrl });
+
+    res.send({ updated, message: "Image updated!" });
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
+
 module.exports = router;
