@@ -67,6 +67,7 @@ router.post("/signup", async (req, res) => {
       nationality,
       education,
       imageUrl,
+      isAmbassador,
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
