@@ -21,4 +21,25 @@ router.get("/", async (req, res, next) => {
   }
 });
 
+//http :/4000/users/:id
+//http --ignore-stdin :4000/users
+//http://localhost:4000/users/:id
+
+router.get("/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    const response = await User.findByPk(
+      id,
+      { include: { model: Event, as: "going" } },
+      { attributes: { exclude: ["password"] } }
+    );
+
+    console.log("user detail Response", response);
+    res.send(response);
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
 module.exports = router;
