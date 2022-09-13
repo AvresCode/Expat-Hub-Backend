@@ -1,20 +1,19 @@
 const { Router } = require("express");
 const router = new Router();
-const User = require("../models").user;
+const Category = require("../models").category;
 const Event = require("../models").event;
 
-//http :4000/users
-//http --ignore-stdin :4000/users
-//http://localhost:4000/users
+//http :4000/categories
+//http --ignore-stdin :4000/categories
+//http://localhost:4000/categories
 
 router.get("/", async (req, res, next) => {
   try {
-    const user = await User.findAll({
+    const category = await Category.findAll({
       include: { model: Event },
-      attributes: { exclude: ["password"] },
     });
 
-    res.send(user);
+    res.send(category);
   } catch (e) {
     console.log(e.message);
     next(e);
