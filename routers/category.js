@@ -19,4 +19,22 @@ router.get("/", async (req, res, next) => {
     next(e);
   }
 });
+
+//http :/4000/categories/:id
+//http --ignore-stdin :4000/categories
+//http://localhost:4000/categories/:id
+
+router.get("/:id", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    const response = await Category.findByPk(id, { include: { model: Event } });
+
+    console.log("category detail Response", response);
+    res.send(response);
+  } catch (e) {
+    console.log(e.message);
+    next(e);
+  }
+});
 module.exports = router;
