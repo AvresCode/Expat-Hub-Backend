@@ -44,7 +44,11 @@ router.get("/:id", async (req, res, next) => {
 
     const eventDetailsResponse = await Event.findByPk(id, {
       include: [
-        { model: User, as: "going" },
+        {
+          model: User,
+          as: "going",
+          through: { attributes: ["userId", "eventId", "status"] },
+        },
         { model: Comment, include: User },
         { model: Image, include: User },
       ],

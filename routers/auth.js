@@ -59,6 +59,8 @@ router.post("/signup", async (req, res) => {
     return res.status(400).send("Please provide all required information");
   }
 
+  console.log("HERE");
+
   try {
     const newUser = await User.create({
       firstName,
