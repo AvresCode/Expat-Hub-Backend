@@ -135,6 +135,45 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+
+        {
+          userId: 3,
+          eventId: 9,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 6,
+          eventId: 10,
+          status: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 1,
+          eventId: 11,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 7,
+          eventId: 11,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 8,
+          eventId: 12,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
