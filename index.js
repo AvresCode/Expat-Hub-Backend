@@ -1,6 +1,7 @@
 //packages
 const express = require("express");
 const corsMiddleWare = require("cors");
+const cors = require("cors");
 
 //routers
 const authRouter = require("./routers/auth");
