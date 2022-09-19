@@ -111,4 +111,47 @@ router.get("/me", authMiddleware, async (req, res) => {
   res.status(200).send(user);
 });
 
+//edit profile
+//   get token : http --ignore-stdin POST :4000/auth/login email="neda@neda.com" password="neda"
+// http --ignore-stdin PATCH :4000/auth/me/editProfile   city="Deft"   authorization:"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2MzU3NDUzOSwiZXhwIjoxNjYzNTgxNzM5fQ.uk6FiyWSsOh6xjivVub62r4XhYAirHdSpCp9V0fDl2c"
+router.patch("/me/editProfile", authMiddleware, async (req, res, next) => {
+  try {
+    const {
+      firstName,
+      lastName,
+      email,
+      password,
+      city,
+      birthDate,
+      gender,
+      nationality,
+      education,
+      imageUrl,
+    } = req.body;
+
+    const userId = req.user.id;
+
+    const user = await User.findByPk(userId);
+    await user.update({
+      firstName,
+      lastName,
+      email,
+      password,
+      city,
+      birthDate,
+      gender,
+      nationality,
+      education,
+      imageUrl,
+    });
+
+    return res
+      .status(200)
+      .send({ user, message: "Profile edited successfully!" });
+  } catch (e) {
+    console.log("profile edit error:", e.message);
+    next(e);
+  }
+});
+
 module.exports = router;
