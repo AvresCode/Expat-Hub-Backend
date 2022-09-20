@@ -136,7 +136,7 @@ router.patch("/me/editProfile", authMiddleware, async (req, res, next) => {
       firstName,
       lastName,
       email,
-      password,
+      password: bcrypt.hashSync(password, SALT_ROUNDS),
       city,
       birthDate,
       gender,
