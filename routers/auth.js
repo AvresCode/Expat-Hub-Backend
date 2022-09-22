@@ -102,7 +102,14 @@ router.get("/me", authMiddleware, async (req, res) => {
   // });
 
   const user = await User.findByPk(id, {
-    include: [{ model: Event, as: "going" }, { model: Event }],
+    include: [
+      {
+        model: Event,
+        as: "going",
+        through: { attributes: ["userId", "eventId", "status"] },
+      },
+      { model: Event },
+    ],
   });
 
   // don't send back the password hash
