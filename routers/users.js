@@ -10,7 +10,11 @@ const Event = require("../models").event;
 router.get("/", async (req, res, next) => {
   try {
     const user = await User.findAll({
-      include: { model: Event },
+      include: {
+        model: Event,
+        as: "going",
+        through: { attributes: ["userId", "eventId", "status"] },
+      },
       attributes: { exclude: ["password"] },
     });
 
@@ -31,7 +35,13 @@ router.get("/:id", async (req, res, next) => {
 
     const response = await User.findByPk(
       id,
-      { include: { model: Event, as: "going" } },
+      {
+        include: {
+          model: Event,
+          as: "going",
+          through: { attributes: ["userId", "eventId", "status"] },
+        },
+      },
       { attributes: { exclude: ["password"] } }
     );
 

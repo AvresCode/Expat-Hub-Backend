@@ -351,7 +351,7 @@ module.exports = {
         {
           userId: 6,
           eventId: 4,
-          status: false,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -365,14 +365,14 @@ module.exports = {
         {
           userId: 6,
           eventId: 7,
-          status: false,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           userId: 6,
           eventId: 10,
-          status: false,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
