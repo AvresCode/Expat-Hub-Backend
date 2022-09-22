@@ -9,10 +9,10 @@ module.exports = {
           title: "Board Game Night!",
           description:
             "On Thursdays we are organizing a Game Night! This night is meant for national and international people from inside and outside of the hostel. The purpose is to meet others, to learn about other languages, and to have fun while playing board games! ",
-          date: "2022-09-08 20:00:00",
+          date: "2022-10-08 20:00:00",
           city: "The Hague",
           address: "Cafe of The Golden Stork, Bierkade 22A, The Hague",
-          spots: 12,
+          spots: 10,
           imageUrl:
             "https://images.unsplash.com/photo-1523875194681-bedd468c58bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
           userId: 1,
@@ -27,7 +27,7 @@ module.exports = {
           date: "2022-10-09 17:00:00",
           city: "Amsterdam",
           address: "Swing Latino School, Kuiperbergweg 31,  Amsterdam",
-          spots: 30,
+          spots: 15,
           imageUrl:
             "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
           userId: 3,
@@ -39,7 +39,7 @@ module.exports = {
           title: "After Summer Lunch",
           description:
             "I hope you had a great summer and enjoyed some time off! Let's meet up for a relaxed Saturday lunch to share nice food and summer memories:) This place looks very trendy and offers a special 3-course menu to share. Looking forward to seeing you there! ",
-          date: "2022-09-20 19:00:00",
+          date: "2022-09-30 19:00:00",
           city: "Amsterdam",
           address: "Valkenburgerstraat 223D 1068 Gv, 1011 MJ Amsterdam ",
           spots: 12,
@@ -70,10 +70,10 @@ module.exports = {
           title: "Winetasting with Fingerfoods",
           description:
             "Bouzy is known for its high-quality wines with matching delicious foods. Get yourself to Bouzy and enjoy a luxury winetasting and the company of fellow expats and global minds. Get to know each other and have a nice evening. ",
-          date: "2022-09-17 19:00:00",
+          date: "2022-09-27 19:00:00",
           city: "The Hague",
           address: "Bouzy, Wine & Food, Denneweg 83, The Hague",
-          spots: 12,
+          spots: 10,
           imageUrl:
             "https://images.unsplash.com/photo-1513618827672-0d7c5ad591b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
           userId: 1,
@@ -101,13 +101,13 @@ module.exports = {
           title: "Biking tour",
           description:
             "Discover Utrecht by bike during this bike tour. Accompanied by a guide, you cycle from the starting point next to Central Station into the center. ",
-          date: "2022-09-20 12:00:00",
+          date: "2022-10-20 12:00:00",
           city: "Utrecht",
           address: "Central station, Utrecht",
-          spots: 6,
+          spots: 10,
           imageUrl:
             "https://images.unsplash.com/photo-1630910315693-99da9cf76efa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1269&q=80",
-          userId: 5,
+          userId: 3,
           categoryId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -120,7 +120,7 @@ module.exports = {
           date: "2022-09-25 17:00:00",
           city: "Eindhoven",
           address: "Berkenstraat 1A, 5616 LV Eindhoven",
-          spots: 6,
+          spots: 10,
           imageUrl:
             "https://res.cloudinary.com/df03t7txo/image/upload/v1663223691/bouldering2_b5ygsd.jpg",
           userId: 5,
@@ -148,7 +148,7 @@ module.exports = {
           title: "An evening to taste 300 beer types!",
           description:
             "Let's go to one of the few pubs in Rotterdam that have 300 beers in their collection amongst other drinks! ",
-          date: "2022-09-29 20:00:00",
+          date: "2022-09-20 20:00:00",
           city: "Rotterdam",
           address: "Schiedamse Vest 148, 3011 BG Rotterdam",
           spots: 12,
