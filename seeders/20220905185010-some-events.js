@@ -9,7 +9,7 @@ module.exports = {
           title: "Board Game Night!",
           description:
             "On Thursdays we are organizing a Game Night! This night is meant for national and international people from inside and outside of the hostel. The purpose is to meet others, to learn about other languages, and to have fun while playing board games! ",
-          date: "2022-10-08 20:00:00",
+          date: "2022-11-08 20:00:00",
           city: "The Hague",
           address: "Cafe of The Golden Stork, Bierkade 22A, The Hague",
           spots: 10,
@@ -24,7 +24,7 @@ module.exports = {
           title: "Salsa Dance Try-out Sessions",
           description:
             "You are hereby welcome to join a try-out session of Salsa Beginners, Salsa Intermediate and Salsa Advance. You can attend these sessions and decide whether you want to join the course that starts the week after.",
-          date: "2022-10-09 17:00:00",
+          date: "2022-12-09 17:00:00",
           city: "Amsterdam",
           address: "Swing Latino School, Kuiperbergweg 31,  Amsterdam",
           spots: 15,
@@ -39,7 +39,7 @@ module.exports = {
           title: "After Summer Lunch",
           description:
             "I hope you had a great summer and enjoyed some time off! Let's meet up for a relaxed Saturday lunch to share nice food and summer memories:) This place looks very trendy and offers a special 3-course menu to share. Looking forward to seeing you there! ",
-          date: "2022-09-30 19:00:00",
+          date: "2022-10-30 19:00:00",
           city: "Amsterdam",
           address: "Valkenburgerstraat 223D 1068 Gv, 1011 MJ Amsterdam ",
           spots: 12,
@@ -70,7 +70,7 @@ module.exports = {
           title: "Winetasting with Fingerfoods",
           description:
             "Bouzy is known for its high-quality wines with matching delicious foods. Get yourself to Bouzy and enjoy a luxury winetasting and the company of fellow expats and global minds. Get to know each other and have a nice evening. ",
-          date: "2022-09-27 19:00:00",
+          date: "2022-10-27 19:00:00",
           city: "The Hague",
           address: "Bouzy, Wine & Food, Denneweg 83, The Hague",
           spots: 10,
@@ -101,7 +101,7 @@ module.exports = {
           title: "Biking tour",
           description:
             "Discover Utrecht by bike during this bike tour. Accompanied by a guide, you cycle from the starting point next to Central Station into the center. ",
-          date: "2022-10-20 12:00:00",
+          date: "2023-01-20 12:00:00",
           city: "Utrecht",
           address: "Central station, Utrecht",
           spots: 10,
@@ -117,7 +117,7 @@ module.exports = {
           description:
             "Let's go climbing together! All you need to bring along is yourself and sporty clothes! Shoes are available for rent.",
 
-          date: "2022-09-25 17:00:00",
+          date: "2022-12-25 17:00:00",
           city: "Eindhoven",
           address: "Berkenstraat 1A, 5616 LV Eindhoven",
           spots: 10,
@@ -164,7 +164,7 @@ module.exports = {
           title: "Ballroom & Latin Dance Party!",
           description:
             "Let's go to one of the few pubs in Rotterdam that have 300 beers in their collection amongst other drinks! ",
-          date: "2022-10-05 20:00:00",
+          date: "2023-02-05 20:00:00",
           city: "Rotterdam",
           address: "Ludolf de Jonghstraat 87  3043 JD Rotterdam",
 
@@ -180,7 +180,7 @@ module.exports = {
           title: "HOOGTIJ Contemporary art tour !",
           description:
             "During HOOGTIJ you can visit more than 20 art locations in the inner-city of The Hague: from white cube to underground; from established art in galleries and institutions to installations and performances in artists initiatives. Free entrance.",
-          date: "2022-09-29 20:00:00",
+          date: "2022-11-29 20:00:00",
           city: "The Hague",
           address: "Stadhouderslaan 41, 2517 HV The Hague",
           spots: 12,
