@@ -1,11 +1,76 @@
-"use strict";
+'use strict';
 
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
-      "attendees",
+      'attendees',
       [
         {
+          userId: 1,
+          eventId: 1,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 2,
+          status: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 1,
+          eventId: 3,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 4,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 5,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 1,
+          eventId: 6,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 7,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 10,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 1,
+          eventId: 11,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
           userId: 2,
           eventId: 4,
           status: true,
@@ -19,266 +84,45 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-
         {
-          userId: 5,
-          eventId: 2,
+          userId: 2,
+          eventId: 6,
           status: false,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          userId: 5,
+          userId: 2,
           eventId: 7,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          userId: 5,
-          eventId: 4,
+          userId: 2,
+          eventId: 13,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          userId: 6,
-          eventId: 3,
+          userId: 2,
+          eventId: 14,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-        {
-          userId: 6,
-          eventId: 7,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
+
         {
           userId: 3,
-          eventId: 1,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 7,
           eventId: 1,
           status: false,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
-
-        {
-          userId: 1,
-          eventId: 1,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 1,
-          eventId: 2,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-
-        {
-          userId: 1,
-          eventId: 3,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 1,
-          eventId: 4,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 1,
-          eventId: 5,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-
-        {
-          userId: 1,
-          eventId: 6,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 1,
-          eventId: 8,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 1,
-          eventId: 10,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 1,
-          eventId: 11,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 1,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 2,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 3,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 4,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 6,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 11,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 12,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 4,
-          eventId: 12,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 5,
-          eventId: 3,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 5,
-          eventId: 6,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 5,
-          eventId: 10,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 5,
-          eventId: 11,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 5,
-          eventId: 12,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-
-        {
-          userId: 8,
-          eventId: 5,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 8,
-          eventId: 2,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 8,
-          eventId: 6,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 8,
-          eventId: 8,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 8,
-          eventId: 10,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 8,
-          eventId: 11,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          userId: 8,
-          eventId: 12,
-          status: true,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
         {
           userId: 3,
-          eventId: 1,
+          eventId: 2,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -286,7 +130,7 @@ module.exports = {
 
         {
           userId: 3,
-          eventId: 2,
+          eventId: 3,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -322,13 +166,146 @@ module.exports = {
         {
           userId: 3,
           eventId: 10,
-          status: true,
+          status: false,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           userId: 3,
           eventId: 12,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 3,
+          eventId: 13,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 4,
+          eventId: 1,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 2,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 3,
+          status: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 4,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 6,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 8,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 11,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 4,
+          eventId: 12,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 4,
+          eventId: 14,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 5,
+          eventId: 2,
+          status: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 5,
+          eventId: 3,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 5,
+          eventId: 4,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 5,
+          eventId: 6,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 5,
+          eventId: 7,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 5,
+          eventId: 10,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 5,
+          eventId: 12,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 5,
+          eventId: 14,
           status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -344,10 +321,11 @@ module.exports = {
         {
           userId: 6,
           eventId: 3,
-          status: false,
+          status: true,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+
         {
           userId: 6,
           eventId: 4,
@@ -383,6 +361,15 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+
+        {
+          userId: 6,
+          eventId: 14,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
         {
           userId: 7,
           eventId: 1,
@@ -421,7 +408,7 @@ module.exports = {
         {
           userId: 7,
           eventId: 7,
-          status: true,
+          status: false,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -452,6 +439,74 @@ module.exports = {
           userId: 7,
           eventId: 12,
           status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 7,
+          eventId: 13,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 8,
+          eventId: 2,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 8,
+          eventId: 5,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 8,
+          eventId: 6,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 8,
+          eventId: 8,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 8,
+          eventId: 10,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 8,
+          eventId: 11,
+          status: false,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          userId: 8,
+          eventId: 12,
+          status: true,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+
+        {
+          userId: 8,
+          eventId: 13,
+          status: false,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -461,6 +516,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete("attendees", null, {});
+    await queryInterface.bulkDelete('attendees', null, {});
   },
 };
